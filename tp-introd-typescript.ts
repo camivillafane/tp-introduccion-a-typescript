@@ -1,7 +1,10 @@
 //Trabajo Práctico "Introducción a TypeScript"
 
 //1
+// Crear una interfaz “Animal” que posea el atributo “nombre”, así como también la definición de un método “gritar” que retorne un string que representa el ruido que hace el animal al gritar.
 interface Animal {
+    nombre: string;
+    gritar(): string;
 }
 
 // 2. Crear las clases “Perro”, “Gato”, y “Vaca” que implementen la interfaz “Animal”. AYE
@@ -100,6 +103,24 @@ jugador = 10;
 console.log(jugador)
 
 //8
+//Crear una clase generica que implemente la siguiente interfaz:
+
+interface Fila<T>{
+    agregar(elemento: T): void;
+    remover(): T | undefined;
+}
+
+class Cola<T> implements Fila<T> {
+    private elementos: T[] = [];
+
+    agregar(elemento: T): void {
+        this.elementos.push(elemento);
+    }
+
+    remover(): T | undefined {
+        return this.elementos.shift();
+    }
+}
 
 // 9 Crear una fila para números, una fila para strings, y una fila para animales (declarando
 // los tipos correspondientes en cada variable). JESI
