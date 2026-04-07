@@ -42,15 +42,21 @@ class Vaca implements Animal {
 }
 
 //3
+/*Crear una constante “perro”, una constante “vaca”, y una constante “gato” que tengan
+como valor una instancia de la clase que corresponda y tengan declarado el tipo de
+datos correspondiente.*/
 
+const perro: Perro = new Perro("Manchitas");
+const vaca: Vaca = new Vaca("Sussie");
+const gato: Gato = new Gato("Loki");
+
+console.log(perro);
+console.log(vaca);
+console.log(gato);
 function describirAnimal(animal:Animal){
 }
 
 //4
-
-const perro = 'algo'
-const vaca = 'algo'
-const gato = 'algo'
 
 // 5. Ejecutar el método “describirAnimal” para cada una de las constantes creadas (3
 // veces en total). JESI
@@ -84,7 +90,14 @@ class Generica<T> implements Fila<T>{
 
 //6
 
-//7
+//7 Crear una variable que pueda contener únicamente valores de tipo número o de tipo
+//string. Asignar a la variable el string “Messi”, y luego reemplazarlo por el número 10.
+
+let jugador: string | number;
+jugador = "Messi";
+jugador = 10;
+
+console.log(jugador)
 
 //8
 
