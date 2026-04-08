@@ -68,12 +68,6 @@ describirAnimal(perro)
 describirAnimal(gato)
 describirAnimal(vaca)
 
-// 8. Crear una clase genérica que implemente la siguiente interfaz:
-// interface Fila<T> {
-// agregar(elemento: T): void;
-// remover(): T | undefined;
-// }
-
 //6
 
 //7 Crear una variable que pueda contener únicamente valores de tipo número o de tipo
