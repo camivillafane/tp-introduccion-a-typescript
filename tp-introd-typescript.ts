@@ -74,23 +74,6 @@ describirAnimal(vaca)
 // remover(): T | undefined;
 // }
 
-interface Fila<T>{
-    agregar(elemento: T): void;
-    remover():T | undefined;
-}
-
-class Generica<T> implements Fila<T>{
-    private elementos: T[]= [];
-
-    agregar(elemento: T): void {
-        this.elementos.push(elemento);
-    }
-
-    remover(): T | undefined {
-        return this.elementos.shift();
-    }
-}
-
 //6
 
 //7 Crear una variable que pueda contener únicamente valores de tipo número o de tipo
@@ -125,9 +108,9 @@ class Cola<T> implements Fila<T> {
 // 9 Crear una fila para números, una fila para strings, y una fila para animales (declarando
 // los tipos correspondientes en cada variable). JESI
 
-const filaNumeros: Generica<number> = new Generica<number>();
-const filaStrings: Generica<string> = new Generica<string>();
-const filaAnimales: Generica<Animal> = new Generica<Animal>();
+const filaNumeros:Cola<number> = new Cola<number>();
+const filaStrings: Cola<string> = new Cola<string>();
+const filaAnimales: Cola<Animal> = new Cola<Animal>();
 
 // 10. En la fila para animales, agregar las 3 instancias que fueron creadas con anterioridad.
 // En las otras 2 filas, agregar 3 elementos a elección en cada una. Para finalizar,
