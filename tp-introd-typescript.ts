@@ -44,10 +44,21 @@ class Vaca implements Animal {
     }
 }
 
-//3
-/*Crear una constante “perro”, una constante “vaca”, y una constante “gato” que tengan
-como valor una instancia de la clase que corresponda y tengan declarado el tipo de
-datos correspondiente.*/
+//3. Crear una función “describirAnimal” que reciba como parámetro un objeto de tipo
+// “Animal” e imprima en la consola “El animal [nombre del animal] hace [ruido que
+// hace el animal al gritar]”. Hacer uso del método “gritar” y el acceso a la propiedad
+// “nombre” para cumplir el objetivo.
+
+function describirAnimal(animal: Animal): void {
+    console.log(
+      "El animal " + animal.nombre + " hace " + animal.gritar()
+    );
+}
+
+
+//4*Crear una constante “perro”, una constante “vaca”, y una constante “gato” que tengan
+//como valor una instancia de la clase que corresponda y tengan declarado el tipo de
+//datos correspondiente.*/
 
 const perro: Perro = new Perro("Manchitas");
 const vaca: Vaca = new Vaca("Sussie");
@@ -56,10 +67,6 @@ const gato: Gato = new Gato("Loki");
 console.log(perro);
 console.log(vaca);
 console.log(gato);
-function describirAnimal(animal:Animal){
-}
-
-//4
 
 // 5. Ejecutar el método “describirAnimal” para cada una de las constantes creadas (3
 // veces en total). JESI
@@ -68,7 +75,17 @@ describirAnimal(perro)
 describirAnimal(gato)
 describirAnimal(vaca)
 
-//6
+//6 Crear un Enum “DiasSemana” que tenga como valores los días de la semana.
+
+enum DiasSemana {
+    Lunes,
+    Martes,
+    Miercoles,
+    Jueves,
+    Viernes,
+    Sabado,
+    Domingo,
+}
 
 //7 Crear una variable que pueda contener únicamente valores de tipo número o de tipo
 //string. Asignar a la variable el string “Messi”, y luego reemplazarlo por el número 10.
