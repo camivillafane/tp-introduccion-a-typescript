@@ -1,13 +1,21 @@
-//Trabajo Práctico "Introducción a TypeScript"
+//  Trabajo Práctico "Introducción a TypeScript"
 
-//1
-// Crear una interfaz “Animal” que posea el atributo “nombre”, así como también la definición de un método “gritar” que retorne un string que representa el ruido que hace el animal al gritar.
+//  ------GRUPO F----------
+
+//  -LOPEZ Jesica Paola
+//  -LOPEZ Juan Gabriel 
+//  -RODRIGUEZ Luciana Ayelén
+//  -ROUDE Luján Alejandra
+//  -VILLAFAÑE Camila Nahir
+
+
+// 1. Crear una interfaz “Animal” que posea el atributo “nombre”, así como también la definición de un método “gritar” que retorne un string que representa el ruido que hace el animal al gritar.
 interface Animal {
     nombre: string;
     gritar(): string;
 }
 
-// 2. Crear las clases “Perro”, “Gato”, y “Vaca” que implementen la interfaz “Animal”. AYE
+// 2. Crear las clases “Perro”, “Gato”, y “Vaca” que implementen la interfaz “Animal”.
 class Perro implements Animal {
     nombre: string;
 
@@ -44,19 +52,19 @@ class Vaca implements Animal {
     }
 }
 
-//3. Crear una función “describirAnimal” que reciba como parámetro un objeto de tipo
+// 3. Crear una función “describirAnimal” que reciba como parámetro un objeto de tipo
 // “Animal” e imprima en la consola “El animal [nombre del animal] hace [ruido que
 // hace el animal al gritar]”. Hacer uso del método “gritar” y el acceso a la propiedad
 // “nombre” para cumplir el objetivo.
 
 function describirAnimal(animal: Animal): void {
     console.log(
-      "El animal " + animal.nombre + " hace " + animal.gritar()
+    "El animal " + animal.nombre + " hace " + animal.gritar()
     );
 }
 
 
-//4*Crear una constante “perro”, una constante “vaca”, y una constante “gato” que tengan
+// 4.*Crear una constante “perro”, una constante “vaca”, y una constante “gato” que tengan
 //como valor una instancia de la clase que corresponda y tengan declarado el tipo de
 //datos correspondiente.*/
 
@@ -75,7 +83,7 @@ describirAnimal(perro)
 describirAnimal(gato)
 describirAnimal(vaca)
 
-//6 Crear un Enum “DiasSemana” que tenga como valores los días de la semana.
+// 6. Crear un Enum “DiasSemana” que tenga como valores los días de la semana.
 
 enum DiasSemana {
     Lunes,
@@ -87,7 +95,7 @@ enum DiasSemana {
     Domingo,
 }
 
-//7 Crear una variable que pueda contener únicamente valores de tipo número o de tipo
+// 7. Crear una variable que pueda contener únicamente valores de tipo número o de tipo
 //string. Asignar a la variable el string “Messi”, y luego reemplazarlo por el número 10.
 
 let jugador: string | number;
@@ -96,8 +104,7 @@ jugador = 10;
 
 console.log(jugador)
 
-//8
-//Crear una clase generica que implemente la siguiente interfaz:
+// 8. Crear una clase generica que implemente la siguiente interfaz:
 
 interface Fila<T>{
     agregar(elemento: T): void;
@@ -116,8 +123,8 @@ class Cola<T> implements Fila<T> {
     }
 }
 
-// 9 Crear una fila para números, una fila para strings, y una fila para animales (declarando
-// los tipos correspondientes en cada variable). JESI
+// 9. Crear una fila para números, una fila para strings, y una fila para animales (declarando
+// los tipos correspondientes en cada variable).
 
 const filaNumeros:Cola<number> = new Cola<number>();
 const filaStrings: Cola<string> = new Cola<string>();
